@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="reloadPage()">
+    <!--Header-->
+    <div class="header">
+        <h2>Welcome to StacksYak</h2>
+    </div>
+
+    <!--Yak Submission-->
+    <div class="row">
+        <div class="rightcolumn">
+            <div class="card">
+                <div class="yaks" style="height:140px;">
+                    <h3>Change Nickname:</h3>
+                    <input type="text" id="nickname"><br>
+                    <input type="submit" value="Change Nickname" id="nicknameSubmit" /> <br>
+                </div>
+                <br>
+                <div class="yaks" style="height:140px;">
+                    <h3>New Yak:</h3>
+                    <div id="yakForm">
+                        <input type="text" id="yakPost" /><br>
+                        <input type="submit" value="Submit" id="submit" onclick="onSubmit()" />
+                    </div>
+                </div>
+            </div>
+            <!--Posted Yaks Table Generated-->
+            <div class="card" id="tableDiv"></div>
+
+            <p hidden id="pulledResponse"></p>
+
+            <!--Posted Yaks Table-->
+            <div class="card">
+                <table id="table">
+                </table>
+            </div>
+
+            <!--Filter -->
+        </div>
+        <div class="leftcolumn">
+            <div class="card" id="filter" style="height:400;">
+                <h2>Filter</h2>
+                <div class="yaks" style="height:100px;">
+                    <label>Sort by Votes</label>
+                    <p><button id="sortVotes">descending</button></p>
+                </div><br>
+                <div class="yaks" style="height:100px;">
+                        <label>Sort by Time Stamp</label>
+                        <p><button id="sortTime">descending</button></p>
+                </div><br>
+                <div class="yaks" style="height:100px;">
+                        <label>Filter by Nickname</label>
+                        <input type="text" id="nicknameFilter" placeholder="Enter nickname.." title="Type in a name">
+                </div><br>
+                <div class="yaks" style="height:100px;">
+                        <label>Filter by Hashtags in Yak</label>
+                        <input type="text" id="hashtagFilter" placeholder="Enter #hashtag.." title="Type in a name">
+                </div><br>
+            </div>
+        </div>
+    </div>
+
+
+    <!--JAVASCRIPT -->
+    <script src="backend.js">
+    </script>
+</body>
+
+</html>
